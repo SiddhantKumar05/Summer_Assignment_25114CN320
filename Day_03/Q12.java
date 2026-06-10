@@ -1,8 +1,8 @@
-package Day_3;
+package Day_03;
 
 import java.util.Scanner;
 
-public class Q11 {
+public class Q12 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter First Number: "); 
@@ -10,8 +10,9 @@ public class Q11 {
         System.out.print("Enter Second Number: "); 
         int n2 = sc.nextInt();
         
+        int lcm = 0;
         int gcd = 0;
-        
+
         int n = Math.min(n1, n2);
 
         for(int i = 1; i <= n; i++)
@@ -22,6 +23,7 @@ public class Q11 {
             }
         }
 
-        System.out.println("The GCD of " + n1 + " and " + n2 + " is " + gcd);
+        lcm = (n1 * n2) / gcd;
+        System.out.println("The LCM of " + n1 + " and " + n2 + " is " + lcm);
     }
 }
