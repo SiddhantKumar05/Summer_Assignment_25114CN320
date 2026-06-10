@@ -1,8 +1,8 @@
-package Day_4;
+package Day_04;
 
 import java.util.Scanner;
 
-public class Q14 
+public class Q13 
 {
     public static void main(String[] args) 
     {
@@ -25,21 +25,15 @@ public class Q14
             return;
         }
 
-        if(n == 2)
-        {
-            System.out.println("1");
-            return;
-        }
+        System.out.print("0, 1");
 
         for(int i = 1; i <= n-2; i++)
         {
+            System.out.print(", ");
             c = a + b;
             a = b;
             b = c;
-            if(i+2 == n)
-            {
-                System.out.print("The " + n +"th Fibonacci term is " + c);
-            }
+            System.out.print(c);
         }
     }
 }
