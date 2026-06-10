@@ -1,14 +1,14 @@
-package Day_8;
+package Day_08;
 
 import java.util.*;
 
-public class Q32 {
+public class Q29 {
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Number: ");
         int n = sc.nextInt();
-
+        
         if(n <= 0)
         {
             System.out.println("Invalid Input");
@@ -19,7 +19,7 @@ public class Q32 {
         {
             for(int j = 1; j <= i; j++)
             {
-                System.out.print(i);
+                System.out.print("*");
             }
             System.out.println();
         }
