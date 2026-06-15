@@ -2,7 +2,7 @@ package Day_15;
 
 import java.util.Scanner;
 
-public class Day_57 {
+public class Q58 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the Size of Array: ");
@@ -28,18 +28,14 @@ public class Day_57 {
             System.out.print(a[i] + " ");
         }
 
-        int y = 0;
-        int z = a.length-1;
-        while(y<z)
+        int temp = a[0];
+        for(int i = 1; i < n; i++)
         {
-            int temp = a[y];
-            a[y] = a[z];
-            a[z] = temp;
-            ++y;
-            --z;
+            a[i-1] = a[i];
         }
+        a[n-1] = temp;
         
-        System.out.println("\nArray in Reverse Order: ");
+        System.out.println("\nArray Rotated Left: ");
         for(int i = 0; i < n; i++)
         {
             System.out.print(a[i] + " ");

@@ -2,7 +2,7 @@ package Day_15;
 
 import java.util.Scanner;
 
-public class Day_58 {
+public class Q60 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the Size of Array: ");
@@ -15,6 +15,7 @@ public class Day_58 {
         }
         
         int a[] = new int[n];
+        int b[] = new int[n];
 
         System.out.println("Enter Elements: ");
         for(int i = 0; i < n; i++)
@@ -28,17 +29,20 @@ public class Day_58 {
             System.out.print(a[i] + " ");
         }
 
-        int temp = a[0];
-        for(int i = 1; i < n; i++)
-        {
-            a[i-1] = a[i];
-        }
-        a[n-1] = temp;
-        
-        System.out.println("\nArray Rotated Left: ");
+        int j = 0;
         for(int i = 0; i < n; i++)
         {
-            System.out.print(a[i] + " ");
+            if(a[i] != 0)
+            {
+                b[j] = a[i];
+                ++j;
+            }
+        }
+
+        System.out.println("Zeroes at the End: ");
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print(b[i] + " ");
         }
     }
 }
