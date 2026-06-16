@@ -44,7 +44,7 @@ public class Q64 {
         System.out.println("Array after Removing Duplicate Elements: ");
         for(int i = 0; i < z; i++)
         {
-            System.out.println(d[i]);
+            System.out.print(d[i] + " ");
         }
     }
 }
